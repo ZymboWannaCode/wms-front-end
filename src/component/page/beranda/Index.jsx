@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { API_LINK } from "../../util/Constants";
+import { API_LINK, APPLICATION_NAME } from "../../util/Constants";
 import UseFetch from "../../util/UseFetch";
 import Loading from "../../part/Loading";
 import Alert from "../../part/Alert";
@@ -65,17 +65,17 @@ export default function BerandaIndex() {
       <div className="card">
         <div className="card-header bg-primary text-white p-4">
           <span className="lead fw-medium">
-            Selamat Datang di Sistem Informasi Produksi
+            Selamat Datang di {APPLICATION_NAME}
           </span>
         </div>
         <div className="card-body lead p-4">
-          Sistem Informasi Produksi ini akan membantu Anda dalam mengelola
-          proses produksi dengan lebih efisien.
-          <br />
-          Mari mulai dengan mengeksplorasi fitur-fitur yang ada dengan mengakses
-          menu yang tersedia.
+          Warehouse Management System ini akan membantu anda mengelola
+          pergudangan perusahaan anda dengan mencatat setiap barang masuk dan
+          barang keluar serta melakukan tracking terhadap lokasi penyimpanan
+          barang
         </div>
       </div>
+      <hr />
       <div className="row mx-0 my-2">
         <div className="col-lg-3">
           <div className="card mt-3 border-0">

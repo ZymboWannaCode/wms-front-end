@@ -62,7 +62,7 @@ export default function App() {
         {listRoute.length > 0 && (
           <>
             <Header displayName={userInfo.nama} roleName={userInfo.peran} />
-            <div style={{ marginTop: "70px" }}></div>
+            <div className="mt-0 mt-md-5"></div>
             <div className="d-flex flex-row">
               <SideBar listMenu={listMenu} />
               <Container>

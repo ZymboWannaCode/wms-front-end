@@ -38,41 +38,46 @@ export default function Header({ displayName, roleName }) {
   }, []);
 
   return (
-    <div className="d-flex justify-content-between fixed-top border-bottom bg-white">
-      <img
-        src={logo}
-        alt="Logo AstraTech"
-        className="p-3 ms-1"
-        style={{ height: "70px" }}
-      />
-      <div className="pe-4 my-auto">
-        <div className="d-flex justify-content-end">
-          <div className="text-end">
-            <p className="fw-bold mx-0 my-0">
-              {displayName} ({roleName})
-            </p>
-            <small className="text-body-secondary" style={{ fontSize: ".7em" }}>
-              Login terakhir: {handleGetLastLogin()} WIB
-            </small>
-          </div>
-          <div className="my-auto ms-4 mt-2">
-            <p
-              className="h2 p-0 m-0 me-1"
-              style={{ cursor: "pointer" }}
-              onClick={() => (window.location.href = "notifikasi")}
-            >
-              <Icon name="envelope" />
-              <span
-                className="badge rounded-pill bg-danger position-absolute top-0 end-0"
-                style={{
-                  fontSize: ".35em",
-                  marginTop: "12px",
-                  marginRight: "20px",
-                }}
+    <div className="d-none d-md-flex justify-content-between fixed-top border-bottom bg-white">
+      <div className="d-flex justify-content-between fixed-top border-bottom bg-white">
+        <img
+          src={logo}
+          alt="Logo AstraTech"
+          className="p-3 ms-1"
+          style={{ height: "60px" }}
+        />
+        <div className="pe-4 my-auto">
+          <div className="d-flex justify-content-end">
+            <div className="text-end">
+              <p className="fw-bold mx-0 my-0">
+                {displayName} ({roleName})
+              </p>
+              <small
+                className="text-body-secondary"
+                style={{ fontSize: ".7em" }}
               >
-                {countNotifikasi}
-              </span>
-            </p>
+                Login terakhir: {handleGetLastLogin()} WIB
+              </small>
+            </div>
+            <div className="my-auto ms-4 mt-2">
+              <p
+                className="h2 p-0 m-0 me-1"
+                style={{ cursor: "pointer" }}
+                onClick={() => (window.location.href = "notifikasi")}
+              >
+                <Icon name="envelope" />
+                <span
+                  className="badge rounded-pill bg-danger position-absolute top-0 end-0"
+                  style={{
+                    fontSize: ".35em",
+                    marginTop: "12px",
+                    marginRight: "20px",
+                  }}
+                >
+                  {countNotifikasi}
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>

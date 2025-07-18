@@ -30,3 +30,12 @@ export const formatDate = (input, dateOnly = false) => {
     ? moment(input).format("DD MMMM yyyy")
     : moment(input).format("DD MMMM yyyy, HH:mm");
 };
+
+export function generateNextId(currentId, prefix, padLength = 2) {
+  const number = parseInt(currentId.replace(prefix, ""), 10);
+  const nextNumber = number + 1;
+
+  const paddedNumber = String(nextNumber).padStart(padLength, "0");
+
+  return prefix + paddedNumber;
+}

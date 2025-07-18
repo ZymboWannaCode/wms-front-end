@@ -3,11 +3,63 @@ import UseFetch from "./UseFetch";
 
 const CreateMenu = async (role) => {
   try {
-    const data = await UseFetch(API_LINK + "Utilities/GetListMenu", {
-      username: "",
-      role: role,
-      application: APPLICATION_ID,
-    });
+    let data = [];
+    switch (role.slice(0, 5)) {
+      case "ROL01":
+        data = [
+          {
+            nama: "Master Data",
+            link: "#",
+            parent: null,
+          },
+          {
+            nama: "Category",
+            link: "category",
+            parent: 1,
+          },
+          {
+            nama: "Item",
+            link: "item",
+            parent: 1,
+          },
+          {
+            nama: "Warehouse Settings",
+            link: "#",
+            parent: null,
+          },
+          {
+            nama: "Zone",
+            link: "zone",
+            parent: 2,
+          },
+          {
+            nama: "Rack",
+            link: "rack",
+            parent: 2,
+          },
+          {
+            nama: "User Management",
+            link: "#",
+            parent: null,
+          },
+          {
+            nama: "User",
+            link: "user",
+            parent: 3,
+          },
+          {
+            nama: "Role",
+            link: "role",
+            parent: 3,
+          },
+        ];
+        break;
+    }
+    // const data = await UseFetch(API_LINK + "Utilities/GetListMenu", {
+    //   username: "",
+    //   role: role,
+    //   application: APPLICATION_ID,
+    // });
 
     let lastHeadkey = "";
     const transformedMenu = [
