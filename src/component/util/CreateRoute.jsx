@@ -4,7 +4,7 @@ const Beranda = lazy(() => import("../page/beranda/Root"));
 const Notifikasi = lazy(() => import("../page/notifikasi/Root"));
 const MasterPelanggan = lazy(() => import("../page/master-pelanggan/Root"));
 const MasterProduk = lazy(() => import("../page/master-produk/Root"));
-const MasterProses = lazy(() => import("../page/master-proses/Root"));
+const MasterRack = lazy(() => import("../page/master-rack/Root"));
 const MasterKursProses = lazy(() => import("../page/master-kurs-proses/Root"));
 const MasterRole = lazy(() => import("../page/master-role/Root"));
 const MasterUser = lazy(() => import("../page/master-user/Root"));
@@ -38,8 +38,8 @@ const routeList = [
     element: <MasterProduk />,
   },
   {
-    path: "/master_proses",
-    element: <MasterProses />,
+    path: "/rack",
+    element: <MasterRack />,
   },
   {
     path: "/master_kurs_proses",
