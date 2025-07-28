@@ -20,6 +20,9 @@ const SuratPenawaran = lazy(() => import("../page/surat-penawaran/Root"));
 const SuratPerintahKerja = lazy(() =>
   import("../page/surat-perintah-kerja/Root")
 );
+const MasterCategory = lazy(() =>
+  import("../page/master-category/Root")
+);
 
 const routeList = [
   {
@@ -73,6 +76,10 @@ const routeList = [
   {
     path: "/surat_perintah_kerja",
     element: <SuratPerintahKerja />,
+  },
+  {
+    path: "/master-category",
+    element: <MasterCategory />,
   },
   {
     path: "/zone",
