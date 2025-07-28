@@ -40,11 +40,11 @@ export default function BerandaIndex() {
         }
       } catch (error) {
         window.scrollTo(0, 0);
-        setIsError((prevError) => ({
-          ...prevError,
-          error: true,
-          message: error.message,
-        }));
+        // setIsError((prevError) => ({
+        //   ...prevError,
+        //   error: true,
+        //   message: error.message,
+        // }));
       } finally {
         setIsLoading(false);
       }
@@ -75,8 +75,8 @@ export default function BerandaIndex() {
           barang
         </div>
       </div>
-      <hr />
-      <div className="row mx-0 my-2">
+      {/* <hr /> */}
+      {/* <div className="row mx-0 my-2">
         <div className="col-lg-3">
           <div className="card mt-3 border-0">
             <div className="card-body bg-primary bg-gradient rounded-2 text-white">
@@ -200,7 +200,7 @@ export default function BerandaIndex() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

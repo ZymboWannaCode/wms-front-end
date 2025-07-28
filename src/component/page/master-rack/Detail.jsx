@@ -121,7 +121,7 @@ export default function MasterRackDetail({ onChangePage, withID }) {
                               <td
                                 className="font-monospace"
                                 key={colIndex}
-                              >{`${colItem}-${rowItem}`}</td>
+                              >{`${colItem}.${rowItem}`}</td>
                             )
                           )}
                         </tr>
