@@ -19,7 +19,7 @@ const CreateMenu = async (role) => {
           },
           {
             nama: "Item",
-            link: "item",
+            link: "master_item",
             parent: 1,
           },
           {

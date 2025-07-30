@@ -9,6 +9,7 @@ const MasterKursProses = lazy(() => import("../page/master-kurs-proses/Root"));
 const MasterRole = lazy(() => import("../page/master-role/Root"));
 const MasterUser = lazy(() => import("../page/master-user/Root"));
 const MasterOperator = lazy(() => import("../page/master-operator/Root"));
+const MasterItem = lazy(() => import("../page/master-item/Root"));
 const PermintaanPelanggan = lazy(() =>
   import("../page/permintaan-pelanggan/Root")
 );
@@ -48,6 +49,10 @@ const routeList = [
   {
     path: "/role",
     element: <MasterRole />,
+  },
+  {
+    path: "/master_item",
+    element: <MasterItem />,
   },
   {
     path: "/user",
